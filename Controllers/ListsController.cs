@@ -56,6 +56,7 @@ namespace dotnet_sdg_template.Controllers
       try
       {
         await _context.SaveChangesAsync();
+        return Ok();
       }
       catch (DbUpdateConcurrencyException)
       {
