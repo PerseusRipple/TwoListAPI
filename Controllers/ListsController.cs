@@ -70,7 +70,21 @@ namespace dotnet_sdg_template.Controllers
         }
       }
 
-      // return NoContent();
+      //   return NoContent();
+    }
+
+    //Put
+    [HttpPut("put/{id}")]
+    public async Task<ActionResult<List>> UpdateList(int id, [FromBody] List newListData)
+    {
+      var list = _context.Lists.FirstOrDefault(f => f.Id == id);
+      list.ListItem = newListData.ListItem;
+      list.IsDone = newListData.IsDone;
+      list.IsDueToday = newListData.IsDueToday;
+      list.DateOfCompletion = newListData.DateOfCompletion;
+      await _context.SaveChangesAsync();
+      return list;
+
     }
 
     // POST: api/List
