@@ -4,6 +4,7 @@ namespace TwoListAPI.Models
 {
   public class List
   {
+
     public int Id { get; set; }
 
     public string ListItem { get; set; }
