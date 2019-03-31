@@ -10,6 +10,8 @@ namespace TwoListAPI.Models
 
     public bool IsDone { get; set; } = false;
 
+    public bool IsDueToday { get; set; } = true;
+
     public DateTime? DateOfCompletion { get; set; } = null;
   }
 }
