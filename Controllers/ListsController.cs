@@ -70,7 +70,7 @@ namespace dotnet_sdg_template.Controllers
         }
       }
 
-      return NoContent();
+      // return NoContent();
     }
 
     // POST: api/List
